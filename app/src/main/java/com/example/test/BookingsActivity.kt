@@ -49,7 +49,4 @@ class BookingsActivity : AppCompatActivity() {
         }
     }
 
-    override fun onBackPressed() {
-        super.onBackPressed()
-    }
 }

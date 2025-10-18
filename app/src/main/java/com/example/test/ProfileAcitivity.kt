@@ -55,7 +55,4 @@ class ProfileAcitivity : AppCompatActivity() {
         }
     }
 
-    override fun onBackPressed() {
-        super.onBackPressed()
-    }
 }

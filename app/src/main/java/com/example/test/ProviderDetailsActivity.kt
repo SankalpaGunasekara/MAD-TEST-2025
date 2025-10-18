@@ -33,7 +33,4 @@ class ProviderDetailsActivity : AppCompatActivity() {
         }
     }
 
-    override fun onBackPressed() {
-        super.onBackPressed()
-    }
 }

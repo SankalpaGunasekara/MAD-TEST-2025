@@ -30,7 +30,4 @@ class Onboard2Activity : AppCompatActivity() {
 
     }
 
-    override fun onBackPressed() {
-        super.onBackPressed()
-    }
 }

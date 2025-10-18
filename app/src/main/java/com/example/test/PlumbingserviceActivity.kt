@@ -33,7 +33,4 @@ class PlumbingserviceActivity : AppCompatActivity() {
         }
     }
 
-    override fun onBackPressed() {
-        super.onBackPressed()
-    }
 }

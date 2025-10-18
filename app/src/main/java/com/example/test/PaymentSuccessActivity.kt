@@ -25,7 +25,4 @@ class PaymentSuccessActivity : AppCompatActivity() {
         }
     }
 
-    override fun onBackPressed() {
-        super.onBackPressed()
-    }
 }
