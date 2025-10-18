@@ -1,0 +1,8 @@
+<resources>
+    <style name="LoginInputTheme" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="colorControlNormal">@color/gray_light</item>
+        <item name="colorControlActivated">@color/light_blue</item>
+        <item name="colorControlHighlight">@color/light_blue</item>
+        <item name="android:textColorHint">@color/gray_dark</item>
+    </style>
+</resources>

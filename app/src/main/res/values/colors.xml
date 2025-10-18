@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="btnclr">#03A9F4</color>
+
+    <color name="backclr">#3F51B5FF</color>
+    <color name="primary_blue">#3B4A8C</color>
+    <color name="light_blue">#5DADE2</color>
+    <color name="yellow_accent">#F1C40F</color>
+    <color name="gray_light">#E0E0E0</color>
+    <color name="gray_dark">#424242</color>
+    <color name="input_background">#FFFFFF</color>
+    <color name="hint_color">#757575</color>
+    <color name="nav_inactive">#9CA3B8</color>
+    <color name="text_secondary">#6B7280</color>
+    <color name="text_primary">#000000</color>
+    <color name="rating_star">#FFC107</color>
+    <color name="success_card_background">#8B7FB8</color>
+    <color name="success_checkmark_bg">#000000</color>
+    <color name="category_tag">#FF9500</color>
+
+
+    <!-- Card Colors -->
+    <color name="category_card_blue">#5C6BC0</color>
+    <color name="offer_card_blue">#5C6BC0</color>
+    <color name="bottom_nav_blue">#303F9F</color>
+
+    <!-- Text Colors -->
+    <color name="search_hint_color">#757575</color>
+    <color name="nav_inactive_color">#9E9E9E</color>
+    <color name="profile_label_color">#B0BEC5</color>
+    <color name="profile_arrow_color">#90A4AE</color>
+
+    <!-- Profile Screen Colors -->
+    <color name="profile_field_color">#7986CB</color>
+
+    <!-- Primary Colors -->
+    <color name="primary_blue_dark">#2A3B7A</color>
+
+    <!-- Text Colors -->
+    <color name="text_dark">#2C3E50</color>
+    <color name="light_gray">#B8C5D1</color>
+    <color name="hint_gray">#9CA3AF</color>
+
+    <!-- Accent Colors -->
+    <color name="yellow">#FFD700</color>
+
+    <!-- Button Colors -->
+    <color name="call_button_gray">#6B7280</color>
+    <color name="book_button_gray">#6B7280</color>
+    <color name="call_button_pressed">#4B5563</color>
+    <color name="book_button_pressed">#4B5563</color>
+
+    <!-- Background Colors -->
+    <color name="card_background">#FFFFFF</color>
+    <color name="search_background">#F8F9FA</color>
+    <color name="card_border">#E5E7EB</color>
+
+    <!-- System Colors -->
+
+    <color name="transparent">#00000000</color>
+    <color name="pay_button_gray">#6B7280</color>
+    <color name="pay_button_pressed">#4B5563</color>
+    <color name="input_border">#D1D5DB</color>
+    <color name="input_focused">#3B82F6</color>
+
+    <!-- Input Field Colors -->
+
+    <color name="input_text">#1F2937</color>
+    <color name="input_hint">#9CA3AF</color>
+
+    <!-- Additional UI Colors -->
+    <color name="success_green">#10B981</color>
+    <color name="error_red">#EF4444</color>
+    <color name="warning_yellow">#F59E0B</color>
+
+</resources>

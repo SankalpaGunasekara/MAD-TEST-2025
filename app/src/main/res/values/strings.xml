@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">test</string>
+    <string name="btn_name">lock</string>
+    <string name="sign_in">Sign in</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="Sign_up">Sign up</string>
+    <string name="forgot_password">Forgot_password?</string>
+    <string name="Sign_in_with_google">Sign in with Google</string>
+    <string name="Sign_in_with_facebook">Sign in with facebbok </string>
+    <string name="Sign_in_with_apple">Sign in with apple</string>
+    <string name="or_login_with">or login with</string>
+    <string name="or_signup_with">or signup with</string>
+    <string name="payment_success">Payment Successful</string>
+    <string name="Home_icon">Home</string>
+    <string name="Bookings_icon">Bookings</string>
+    <string name="Tips_icon">Tips</string>
+    <string name="Profile_icon">Profile</string>
+    <string name="onboard">Choose Your Need</string>
+
+
+</resources>
