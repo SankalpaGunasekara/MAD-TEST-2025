@@ -19,12 +19,21 @@ class ProviderDetailsActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val newButton: Button = findViewById(R.id.kasunpay)
+        val bookNowButton: Button = findViewById(R.id.kasunpay)
 
-        newButton.setOnClickListener {
+        bookNowButton.setOnClickListener {
             // Navigate to Home
             val intent = Intent(this, PaymentActivity::class.java)
             startActivity(intent)
         }
+
+        val backButton = findViewById<android.widget.ImageView>(R.id.btn_back)
+        backButton.setOnClickListener {
+            onBackPressed()
+        }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
     }
 }

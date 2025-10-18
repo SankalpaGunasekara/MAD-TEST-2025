@@ -23,10 +23,14 @@ class Onboard2Activity : AppCompatActivity() {
 
         newButton.setOnClickListener {
             // Navigate to Home
-            val intent = Intent(this, Login2Activity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
 
 
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
     }
 }

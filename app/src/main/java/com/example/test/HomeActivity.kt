@@ -19,37 +19,38 @@ class HomeActivity : AppCompatActivity() {
             insets
         }
 
-        val plumb = findViewById<ImageView>(R.id.plumbingbtn)
-        plumb.setOnClickListener {
-            val intent1 = Intent(this, PlumbingserviceActivity::class.java)
-            startActivity(intent1)
+        val plumbingButton = findViewById<ImageView>(R.id.plumbingbtn)
+        plumbingButton.setOnClickListener {
+            val intent = Intent(this, PlumbingserviceActivity::class.java)
+            startActivity(intent)
         }
 
-        val plumb1 = findViewById<ImageView>(R.id.home_nav)
-        plumb1.setOnClickListener {
-            val intent1 = Intent(this, HomeActivity::class.java)
-            startActivity(intent1)
+        val homeButton = findViewById<ImageView>(R.id.home_nav)
+        homeButton.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
         }
 
-        val plumb2 = findViewById<ImageView>(R.id.bookUI)
-        plumb2.setOnClickListener {
-            val intent1 = Intent(this, BookingsActivity::class.java)
-            startActivity(intent1)
+        val bookingsButton = findViewById<ImageView>(R.id.bookUI)
+        bookingsButton.setOnClickListener {
+            val intent = Intent(this, BookingsActivity::class.java)
+            startActivity(intent)
         }
 
-        val plumb3 = findViewById<ImageView>(R.id.tipimg)
-        plumb3.setOnClickListener {
-            val intent1 = Intent(this, TipsActivity::class.java)
-            startActivity(intent1)
+        val tipsButton = findViewById<ImageView>(R.id.tipimg)
+        tipsButton.setOnClickListener {
+            val intent = Intent(this, TipsActivity::class.java)
+            startActivity(intent)
         }
 
-        val plumb4 = findViewById<ImageView>(R.id.profimg)
-        plumb4.setOnClickListener {
-            val intent1 = Intent(this, ProfileAcitivity::class.java)
-            startActivity(intent1)
+        val profileButton = findViewById<ImageView>(R.id.profimg)
+        profileButton.setOnClickListener {
+            val intent = Intent(this, ProfileAcitivity::class.java)
+            startActivity(intent)
         }
+    }
 
-
-
+    override fun onBackPressed() {
+        super.onBackPressed()
     }
 }

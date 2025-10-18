@@ -15,25 +15,25 @@ class PlumbingserviceActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_plumbingservice)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.plumb
-        )) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.plumb)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        //stay without onboard 2
-//        val newButton: Button = findViewById(R.id.plumbingbtn)
-//
-//        newButton.setOnClickListener {
-//            // Navigate to Home
-//            val intent = Intent(this, PlumbingserviceActivity ::class.java)
-//            startActivity(intent)
-//        }
-        val plumb = findViewById<LinearLayout>(R.id.kasun)
-        plumb.setOnClickListener {
-            val intent1 = Intent(this, ProviderDetailsActivity::class.java)
-            startActivity(intent1)
+        val providerCard = findViewById<LinearLayout>(R.id.kasun)
+        providerCard.setOnClickListener {
+            val intent = Intent(this, ProviderDetailsActivity::class.java)
+            startActivity(intent)
         }
+
+        val backArrow = findViewById<ImageView>(R.id.back_arrow)
+        backArrow.setOnClickListener {
+            onBackPressed()
+        }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
     }
 }

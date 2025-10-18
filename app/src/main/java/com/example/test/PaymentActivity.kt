@@ -18,14 +18,21 @@ class PaymentActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val newButton: Button = findViewById(R.id.paynowbtn)
+        val payNowButton: Button = findViewById(R.id.paynowbtn)
 
-        newButton.setOnClickListener {
+        payNowButton.setOnClickListener {
             // Navigate to Home
             val intent = Intent(this, PaymentSuccessActivity::class.java)
             startActivity(intent)
         }
 
+        val backArrow = findViewById<android.widget.ImageView>(R.id.back_arrow)
+        backArrow.setOnClickListener {
+            onBackPressed()
+        }
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+    }
 }

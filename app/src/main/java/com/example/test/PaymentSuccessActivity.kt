@@ -18,10 +18,14 @@ class PaymentSuccessActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val plumb = findViewById<ImageView>(R.id.bookUI)
-        plumb.setOnClickListener {
-            val intent1 = Intent(this, BookingsActivity::class.java)
-            startActivity(intent1)
+        val backToHomeButton = findViewById<android.widget.Button>(R.id.backToHome)
+        backToHomeButton.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
     }
 }

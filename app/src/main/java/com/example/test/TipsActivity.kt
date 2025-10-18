@@ -18,32 +18,37 @@ class TipsActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val plumb1 = findViewById<ImageView>(R.id.nav_home)
-        plumb1.setOnClickListener {
-            val intent1 = Intent(this, HomeActivity::class.java)
-            startActivity(intent1)
+        val homeButton = findViewById<ImageView>(R.id.nav_home)
+        homeButton.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
         }
 
-        val plumb2 = findViewById<ImageView>(R.id.bookUI)
-        plumb2.setOnClickListener {
-            val intent1 = Intent(this, BookingsActivity::class.java)
-            startActivity(intent1)
+        val bookingsButton = findViewById<ImageView>(R.id.bookUI)
+        bookingsButton.setOnClickListener {
+            val intent = Intent(this, BookingsActivity::class.java)
+            startActivity(intent)
         }
 
-
-
-        val plumb4 = findViewById<ImageView>(R.id.profimg)
-        plumb4.setOnClickListener {
-            val intent1 = Intent(this, ProfileAcitivity::class.java)
-            startActivity(intent1)
-
+        val profileButton = findViewById<ImageView>(R.id.profimg)
+        profileButton.setOnClickListener {
+            val intent = Intent(this, ProfileAcitivity::class.java)
+            startActivity(intent)
         }
-         val plumb3 = findViewById<ImageView>(R.id.tipimg)
-         plumb3.setOnClickListener {
-           val intent1 = Intent(this, TipsActivity::class.java)
-            startActivity(intent1)
-          }
 
+        val tipsButton = findViewById<ImageView>(R.id.tipimg)
+        tipsButton.setOnClickListener {
+            val intent = Intent(this, TipsActivity::class.java)
+            startActivity(intent)
+        }
 
+        val backArrow = findViewById<ImageView>(R.id.back_arrow)
+        backArrow.setOnClickListener {
+            onBackPressed()
+        }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
     }
 }

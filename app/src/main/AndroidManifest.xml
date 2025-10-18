@@ -16,7 +16,7 @@
             android:exported="false" />
         <activity
             android:name=".TipsActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".BookingsActivity"
             android:exported="false" />
@@ -31,10 +31,7 @@
             android:exported="false" />
         <activity
             android:name=".SignupActivity"
-            android:exported="true" />
-        <activity
-            android:name=".Login2Activity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".PlumbingserviceActivity"
             android:exported="false" />

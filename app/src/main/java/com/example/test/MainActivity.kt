@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         newButton.setOnClickListener {
             // Navigate to onboard2
-            val intent = Intent(this, LoginActivity::class.java)
+            val intent = Intent(this, Onboard2Activity::class.java)
             startActivity(intent)
         }
 

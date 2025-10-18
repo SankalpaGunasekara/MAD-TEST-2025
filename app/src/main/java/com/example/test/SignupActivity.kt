@@ -16,12 +16,17 @@ class SignupActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-    }
 
-    class SignupActivity : AppCompatActivity() {
-        override fun onCreate(savedInstanceState: Bundle?) {
-            super.onCreate(savedInstanceState)
-            setContentView(R.layout.activity_signup)
+        val login = findViewById<android.widget.TextView>(R.id.tvLogin)
+        login.setOnClickListener {
+            val intent = android.content.Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
+
+        val signUp = findViewById<android.widget.Button>(R.id.btnSignIn)
+        signUp.setOnClickListener {
+            val intent = android.content.Intent(this, HomeActivity::class.java)
+            startActivity(intent)
         }
     }
 }

@@ -65,7 +65,18 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:gravity="center"
-                android:lineSpacingExtra="4dp" />
+                android:lineSpacingExtra="4dp"
+                android:layout_marginBottom="32dp" />
+
+            <Button
+                android:id="@+id/backToHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back to Home"
+                android:backgroundTint="@color/input_focused"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                />
 
         </LinearLayout>
 
