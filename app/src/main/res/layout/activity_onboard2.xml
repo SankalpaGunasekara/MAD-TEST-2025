@@ -1,108 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FEF9F4"
     tools:context=".Onboard2Activity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/primary_blue"
-        android:orientation="vertical"
-        android:padding="24dp">
+    <!-- Main Title -->
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Discover a\nWorld of Talent"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- Status Bar Space -->
-        <View
+    <!-- The single image for the services grid -->
+    <ImageView
+        android:id="@+id/services_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="2dp"
+        android:contentDescription="Creative services grid"
+        android:src="@drawable/services"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_text" />
+
+    <!-- Guideline to position the top of the bottom card -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.62" />
+
+    <!-- Bottom Card View -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="#333333"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.App.CustomCard">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="24dp" />
+            android:layout_height="match_parent"
+            android:padding="0dp">
 
-        <!-- Status Bar Mock -->
+            <!-- Subtitle Text -->
+            <TextView
+                android:id="@+id/subtitle_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Choose from a wide range\nof creative services."
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- Welcome Title -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
-            android:text="Choose Your Need"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="28sp"
-            android:textStyle="bold" />
+            <!-- Page Indicator Dots -->
+            <LinearLayout
+                android:id="@+id/dots_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/subtitle_text">
 
-        <!-- Character Illustration Container -->
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/dot_inactive" />
 
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/dot_active" />
 
-            <!-- Character Image -->
-            <ImageView
-                android:id="@+id/characterImage"
-                android:layout_width="match_parent"
-                android:layout_height="389dp"
-                android:layout_gravity="center"
-                android:contentDescription="wide range of services"
-                android:src="@drawable/onboard2_image" />
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/dot_inactive" />
+            </LinearLayout>
 
-        </FrameLayout>
+            <!-- Next Button -->
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:backgroundTint="#F4DAB4"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:cornerRadius="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dots_indicator" />
 
-        <!-- Subtitle Text -->
-        <TextView
-            android:layout_width="374dp"
-            android:layout_height="52dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="32dp"
-            android:lineSpacingExtra="4dp"
-            android:text="Book reliable home services\nin seconds"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            tools:text="Choose from a wide range  of services" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <!-- Page Indicator Dots -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="32dp"
-            android:orientation="horizontal">
-
-            <View
-                android:layout_width="8dp"
-                android:layout_height="8dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/button_background_gray" />
-
-            <View
-                android:layout_width="8dp"
-                android:layout_height="8dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/button_next_background" />
-
-            <View
-                android:layout_width="8dp"
-                android:layout_height="8dp"
-                android:background="@drawable/button_background_gray" />
-
-        </LinearLayout>
-
-        <!-- Next Button -->
-        <Button
-            android:id="@+id/btnNext"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginBottom="32dp"
-            android:backgroundTint="@color/btnclr"
-            android:text="Next"
-            android:textAllCaps="false"
-            android:textColor="@color/primary_blue"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-    </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

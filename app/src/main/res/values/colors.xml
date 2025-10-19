@@ -3,6 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="btnclr">#03A9F4</color>
+    <color name="paleWhite">#FDFBF4</color>
 
     <color name="backclr">#3F51B5FF</color>
     <color name="primary_blue">#3B4A8C</color>

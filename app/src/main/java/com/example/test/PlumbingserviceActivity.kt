@@ -21,6 +21,32 @@ class PlumbingserviceActivity : AppCompatActivity() {
             insets
         }
 
+        val homeButton = findViewById<Button>(R.id.home_nav)
+        homeButton.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+        }
+
+        val bookingsButton = findViewById<Button>(R.id.navBookings)
+        bookingsButton.setOnClickListener {
+            val intent = Intent(this, BookingsActivity::class.java)
+            startActivity(intent)
+        }
+
+        // --- FIX 4: Use the correct ID (navTips) and correct type (Button) ---
+        val tipsButton = findViewById<Button>(R.id.navTips)
+        tipsButton.setOnClickListener {
+            val intent = Intent(this, TipsActivity::class.java)
+            startActivity(intent)
+        }
+
+        // --- FIX 5: Use the correct ID (navProfile) and correct type (Button) ---
+        val profileButton = findViewById<Button>(R.id.navProfile)
+        profileButton.setOnClickListener {
+            val intent = Intent(this, ProfileAcitivity::class.java)
+            startActivity(intent)
+        }
+
         val providerCard = findViewById<LinearLayout>(R.id.kasun)
         providerCard.setOnClickListener {
             val intent = Intent(this, ProviderDetailsActivity::class.java)

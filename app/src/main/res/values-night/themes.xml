@@ -3,5 +3,15 @@
     <style name="Base.Theme.Test" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <!-- Other theme attributes -->
+
+        <!-- Make status bar transparent -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+
+        <!-- Make navigation bar transparent -->
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+
+        <!-- This makes the status bar icons (time, battery) dark. Use "false" for light icons on a dark background. -->
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 </resources>

@@ -2,6 +2,7 @@ package com.example.test
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -19,33 +20,31 @@ class BookingsActivity : AppCompatActivity() {
             insets
         }
 
-        val tipsButton = findViewById<ImageView>(R.id.tipimg)
-        tipsButton.setOnClickListener {
-            val intent = Intent(this, TipsActivity::class.java)
-            startActivity(intent)
-        }
-
-        val homeButton = findViewById<ImageView>(R.id.nav_home)
+        val homeButton = findViewById<Button>(R.id.home_nav)
         homeButton.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
 
-        val bookingsButton = findViewById<ImageView>(R.id.bookUI)
+        // --- FIX 3: Use the correct ID (navBookings) and correct type (Button) ---
+        val bookingsButton = findViewById<Button>(R.id.navBookings)
         bookingsButton.setOnClickListener {
             val intent = Intent(this, BookingsActivity::class.java)
             startActivity(intent)
         }
 
-        val profileButton = findViewById<ImageView>(R.id.profimg)
-        profileButton.setOnClickListener {
-            val intent = Intent(this, ProfileAcitivity::class.java)
+        // --- FIX 4: Use the correct ID (navTips) and correct type (Button) ---
+        val tipsButton = findViewById<Button>(R.id.navTips)
+        tipsButton.setOnClickListener {
+            val intent = Intent(this, TipsActivity::class.java)
             startActivity(intent)
         }
 
-        val backArrow = findViewById<ImageView>(R.id.back_arrow)
-        backArrow.setOnClickListener {
-            onBackPressed()
+        // --- FIX 5: Use the correct ID (navProfile) and correct type (Button) ---
+        val profileButton = findViewById<Button>(R.id.nav_Profile)
+        profileButton.setOnClickListener {
+            val intent = Intent(this, ProfileAcitivity::class.java)
+            startActivity(intent)
         }
     }
 

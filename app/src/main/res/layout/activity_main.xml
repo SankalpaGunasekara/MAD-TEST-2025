@@ -5,105 +5,132 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#78FDFBF7"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/primary_blue"
-        android:orientation="vertical"
-        android:padding="24dp">
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="Background"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- Status Bar Space -->
-        <View
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Welcome to"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="260dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/creative_con_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcome_text" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="#333333"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.App.CustomCard">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="24dp" />
+            android:layout_height="match_parent"
+            android:padding="0dp">   <!-- THIS IS THE LINE I HAVE CORRECTED -->
 
-        <!-- Status Bar Mock -->
+            <!-- Subtitle Text -->
+            <TextView
+                android:id="@+id/subtitle_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:text="Book talented creatives\nin seconds."
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- Welcome Title -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
-            android:text="Welcome to FixMate"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="28sp"
-            android:textStyle="bold" />
+            <!-- Page Indicator Dots -->
+            <LinearLayout
+                android:id="@+id/dots_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/subtitle_text">
 
-        <!-- Character Illustration Container -->
-        <FrameLayout
-            android:layout_width="366dp"
-            android:layout_height="379dp"
-            android:layout_weight="1">
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/dot_active" />
 
-            <!-- Yellow Circle Background -->
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/dot_inactive" />
 
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/dot_inactive" />
 
-            <!-- Character Image -->
-            <ImageView
-                android:id="@+id/characterImage"
-                android:layout_width="349dp"
-                android:layout_height="394dp"
-                android:layout_gravity="center"
-                android:contentDescription="FixMate repair technician"
-                android:src="@drawable/ic_fixmate_character" />
+            </LinearLayout>
 
-        </FrameLayout>
+            <!-- Next Button -->
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:backgroundTint="#F4DAB4"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:cornerRadius="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dots_indicator" />
 
-        <!-- Subtitle Text -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="32dp"
-            android:text="Book reliable home services\nin seconds"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:lineSpacingExtra="4dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <!-- Page Indicator Dots -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="32dp"
-            android:orientation="horizontal">
-
-            <View
-                android:layout_width="8dp"
-                android:layout_height="8dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/dot_active" />
-
-            <View
-                android:layout_width="8dp"
-                android:layout_height="8dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/dot_inactive" />
-
-            <View
-                android:layout_width="8dp"
-                android:layout_height="8dp"
-                android:background="@drawable/dot_inactive" />
-
-        </LinearLayout>
-
-        <!-- Next Button -->
-        <Button
-            android:id="@+id/btnNext"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginBottom="32dp"
-            android:backgroundTint="@color/btnclr"
-            android:text="Next"
-            android:textAllCaps="false"
-            android:textColor="@color/primary_blue"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-    </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

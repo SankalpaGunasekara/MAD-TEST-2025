@@ -2,7 +2,8 @@ package com.example.test
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.ImageView
+import android.widget.Button
+import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -19,35 +20,35 @@ class HomeActivity : AppCompatActivity() {
             insets
         }
 
-        val plumbingButton = findViewById<ImageView>(R.id.plumbingbtn)
-        plumbingButton.setOnClickListener {
+        val photographyButton = findViewById<LinearLayout>(R.id.camBtn)
+        photographyButton.setOnClickListener {
             val intent = Intent(this, PlumbingserviceActivity::class.java)
             startActivity(intent)
         }
 
-        val homeButton = findViewById<ImageView>(R.id.home_nav)
+        val homeButton = findViewById<Button>(R.id.home_nav)
         homeButton.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
 
-        val bookingsButton = findViewById<ImageView>(R.id.bookUI)
+        val bookingsButton = findViewById<Button>(R.id.navBookings)
         bookingsButton.setOnClickListener {
             val intent = Intent(this, BookingsActivity::class.java)
             startActivity(intent)
         }
 
-        val tipsButton = findViewById<ImageView>(R.id.tipimg)
+        val tipsButton = findViewById<Button>(R.id.navTips)
         tipsButton.setOnClickListener {
             val intent = Intent(this, TipsActivity::class.java)
             startActivity(intent)
         }
 
-        val profileButton = findViewById<ImageView>(R.id.profimg)
+        // --- FIX: Using the consistent ID R.id.nav_Profile ---
+        val profileButton = findViewById<Button>(R.id.nav_Profile)
         profileButton.setOnClickListener {
             val intent = Intent(this, ProfileAcitivity::class.java)
             startActivity(intent)
         }
     }
-
 }
